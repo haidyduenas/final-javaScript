@@ -2,6 +2,7 @@ body{
 	background-image: url(../img/des.jpg);
 	background-position: center;
 	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 #formulario{
