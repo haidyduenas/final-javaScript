@@ -1,8 +1,9 @@
 body{
 	background-image: url(../img/des.jpg);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 .navbar-trans {
   background-color: transparent;
@@ -66,9 +67,13 @@ body{
     justify-content: space-between;
 }
 /*text*/
-.text-white,.text-white-hover:hover{color:#fff!important}
+.text-white,.text-white-hover:hover{
+	color:#fff!important
+}
 /*fontcolor*/
-.light-grey {color:#000!important;background-color:#E6E9ED!important}
+.light-grey {
+	color:#000!important;
+	background-color:#E6E9ED!important}
 
 #formulario{
 	margin: 15%;
