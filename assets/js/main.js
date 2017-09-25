@@ -79,6 +79,7 @@ class App {
 	}
 	search(){
 		$('#data-search').click(function(e){
+			$("#show-seating").remove();
 		let dni = $("#dni-search").val();
 		for(let i in seating){
 			console.log(seating);
