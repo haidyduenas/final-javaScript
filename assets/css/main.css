@@ -11,9 +11,9 @@ body{
 	background-color: #d8ecf7;
 	border: 1px solid #afcde3;
 	border-radius: 5px;
-	border-spacing: 4px;
 	margin-right: 3px;
 }
+
 .navbar-trans {
   background-color: transparent;
   border: none;
@@ -97,11 +97,6 @@ body{
 	float: left;
 }
 
-#data{
-	color: #FFFFFF;
-	font-weight: 600;
-}
-
 .btn-primary{
 	margin: 2%;
 }
@@ -129,46 +124,16 @@ table {
 	margin :5%;
 
 }
+#data-save{
+	background-color: rgba(7, 205, 118, .6);
+    width: 30%;
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    left: 40%;
+}
 /*Search*/
 #search{
 	position: absolute;
     top: 20%;
 }
-#custom-search-input {
-        margin:0;
-        margin-top: 10px;
-        padding: 0;
-    }
- 
-    #custom-search-input .search-query {
-        padding-right: 3px;
-        padding-right: 4px \9;
-        padding-left: 3px;
-        padding-left: 4px \9;
-        /* IE7-8 doesn't have border-radius, so don't indent the padding */
- 
-        margin-bottom: 0;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-    }
- 
-    #custom-search-input button {
-        border: 0;
-        background: none;
-        /** belows styles are working good */
-        padding: 2px 5px;
-        margin-top: 2px;
-        position: relative;
-        left: -28px;
-        /* IE7-8 doesn't have border-radius, so don't indent the padding */
-        margin-bottom: 0;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        color:#D9230F;
-    }
- 
-    .search-query:focus + button {
-        z-index: 3;   
-    }
