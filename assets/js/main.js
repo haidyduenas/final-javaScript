@@ -34,6 +34,7 @@ class App {
 	  		$ ("#table-space" ).addClass("no-visibility");
 	  		$('#form-space').addClass('no-visibility');
 	  		$ ("#list" ).addClass("no-visibility");
+	  		$("#show-seating").addClass('no-visibility');
 		  	$('#search').removeClass("no-visibility");
 	  	}
 	  	/*Listar pasajeros*/
@@ -78,8 +79,9 @@ class App {
 
 	}
 	search(){
+
 		$('#data-search').click(function(e){
-			$("#show-seating").remove();
+		$("#show-seating").remove();
 		let dni = $("#dni-search").val();
 		for(let i in seating){
 			console.log(seating);
@@ -95,6 +97,7 @@ class App {
 	}
 	list(){
 		$('#list').click(function(){
+		$('#list').removeClass()
 		let lista = "";
   			for (let i = 1; i <= seating.length; i++) {
     			if (seating[i-1]!= undefined) {
@@ -105,7 +108,18 @@ class App {
 	    			lista += lugar+ nombre + apellido+ dni;
 	    			}
   				}
-  		this.html(lista);
+  		$('#list').html(lista);
+		});
+	}
+	scroll(){
+	$(window).scroll(function() {
+    	if($(this).scrollTop() > 50)
+    	{
+        $('.navbar-trans').addClass('afterscroll');
+    	} 
+    	else{
+        $('.navbar-trans').removeClass('afterscroll');
+    	}  
 		});
 	}
 
@@ -117,6 +131,7 @@ classSeating.select();
 classSeating.booking();
 classSeating.list();
 classSeating.search();
+classSeating.scroll();
 
 
 
