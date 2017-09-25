@@ -65,21 +65,21 @@
 		<section id="formulario">
 			<div class="row" >
 				<div class="col-xs-12 col-md-12 col-lg-12 datos text-left" id="scp-Seating" >
-					<div class="form-group col-xs-12 col-md-12 col-lg-12 datos text-center" >
-						<h3 id="1">1.-Reservar de asientos</h3>
+					<div class="form-group col-xs-5 col-md-5 col-lg-5 datos text-center" >
+						<p id="1">Reservar de asientos</p>
 					</div>
-					<div class="form-group col-xs-12 col-md-12 col-lg-12 datos text-center" id="2">
-						<h1>2.-Liberar asientos</h1>
+					<div class="form-group col-xs-5 col-md-5 col-lg-5 datos text-center" >
+						<p id="2">Liberar asientos</p>
 					</div>
-					<div class="form-group col-xs-12 col-md-12 col-lg-12 datos text-center" id="3">
-						<h1> 3.-Buscar Dni</h1>
+					<div class="form-group col-xs-5 col-md-5 col-lg-5 datos text-center" >
+						<p id="3">Buscar Dni</p>
 					</div>
-					<div class="form-group col-xs-12 col-md-12 col-lg-12 datos text-center" id="4">
-						<h1> 4.-Listar pasajeros</h1>
+					<div class="form-group col-xs-5 col-md-5 col-lg-5 datos text-cente">
+						<p id="4">Listar pasajeros</p>
 					</div>
 				</div>
-				<div class="no-visibility" id="table-space" >
-					<div class="col-xs-12 col-md-12 col-lg-12">
+				<div class="col-lg-12"  >
+					<div class="no-visibility col-xs-12 col-md-12 col-lg-12" id="table-space">
 						<table>
 						  	<tr class="seating-tr">
 						        <td class="seating-air" id="1">1</td>
@@ -97,23 +97,31 @@
 						    </tr>
 						</table>
 				  	</div>
-				  	<div class="col-xs-12 col-md-12 col-lg-12" id="show-seating"></div>
-		            <div id="form-space">
+				  	<div class="col-xs-12 col-md-12 col-lg-12 no-visibility " id="show-seating"></div>
+		            <div class ="no-visibility" id="form-space">
 		                <p class="form-title text-center text-uppercase">Datos del pasajero</p>
 		                <form>
 				            <input class="input-data" id ="data-name" type="text" placeholder="Nombre" />
 				            <input class="input-data" id ="data-lastname" type="text" placeholder="Apellidos" />
 				            <input class="input-data" id ="data-dni" type="number" placeholder="DNI" />
-				            <input class="input-data" id ="data-save" type="submit" value="Sign In" class="btn btn-success btn-sm" />
-				            <div class="remember-forgot">
-				                    <div class="col-md-6">
-				                        <div class="checkbox">
-				                            <label><input type="checkbox" />Remember Me</label>   
-				                        </div>
-				                    </div>
-				                </div>
-		                </form>
-
+				            <button id ="data-save">Enviar</button>
+		            </div>
+		            <div class="col-xs-12 col-md-12 col-lg-12 no-visibility" id="search">
+		            <h2>Buscar pasajero</h2>
+           			<div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                                <input type="text" class="search-query form-control" placeholder="Search" id="dni-search"/>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-danger" type="button" >
+                                        <span class=" glyphicon glyphicon-search" id="data-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="col-xs-12 col-md-12 col-lg-12" id="space-found"></div>
+                        </div>
+                    </div>
+		            <div class="col-xs-12 col-md-12 col-lg-12 no-visibility" id="list" >
+		            	<p>Lista de pasajeros</p>	
 		            </div>
 				</div>
 			</div>
