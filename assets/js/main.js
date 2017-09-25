@@ -23,6 +23,7 @@ class App {
 	  	if(id== 1){
 		  	$ ("#table-space" ).removeClass("no-visibility");
 		  	$('#form-space').removeClass('no-visibility');
+		  	$("#show-seating").removeClass('no-visibility')
 		  	$('#search').addClass("no-visibility");
 	  	}
 	  	/* Liberar pasajero*/
