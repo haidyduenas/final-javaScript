@@ -107,7 +107,10 @@ table {
 
 }
 .seating-air{
-	    border: 14px solid rgba(128, 139, 150, .0);
+	border-radius: 10px;
+    background-color: rgba(92,234,14, .6);
+    border: 14px solid rgba(92, 234, 14, .0);
+	border: 14px solid rgba(128, 139, 150, .0);
 }
 .no-visibility{
 	visibility: hidden;
@@ -136,4 +139,8 @@ table {
 #search{
 	position: absolute;
     top: 20%;
+}
+
+#show{
+	background-color: rgba(165, 105, 189, .6);
 }
