@@ -4,6 +4,7 @@ body{
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
+    text-align: center;
 }
 .navbar-trans {
   background-color: transparent;
@@ -95,4 +96,28 @@ body{
 
 .btn-primary{
 	margin: 2%;
+}
+
+table {
+	width: 100%;
+	text-align: center;
+
+}
+.seating-air{
+	    border: 14px solid rgba(128, 139, 150, .0);
+}
+.no-visibility{
+	visibility: hidden;
+}
+
+#form-space{
+    margin: 0%;
+    padding: 5%;
+
+}
+
+.input-data{
+	display: flex;
+	margin :5%;
+
 }
