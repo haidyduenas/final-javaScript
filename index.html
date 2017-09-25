@@ -14,9 +14,8 @@
 <body>
 	<div class="container-fluid">
 		<nav class="navbar navbar-default navbar-doublerow navbar-trans navbar-fixed-top">
-	  <!-- top nav -->
-	  <nav class="navbar navbar-top hidden-xs">
-	    <div class="container">
+	  		<nav class="navbar navbar-top hidden-xs">
+	    		<div class="container">
 	      <!-- left nav top -->
 	      <ul class="nav navbar-nav pull-left">
 	        <li><a href="#"><span class="glyphicon glyphicon-thumbs-up text-white"></span></a></li>
@@ -29,12 +28,11 @@
 	        <li><a href="#" class="text-white">About Us</a></li>
 	        <li><a href="#" class="text-white">Contact Us</a></li> 
 	      </ul>
-	    </div>
-	    <div class="dividline light-grey"></div>
-	  </nav>
-	  <!-- down nav -->
-	  <nav class="navbar navbar-down">
-	    <div class="container">
+	    		</div>
+	    		<div class="dividline light-grey"></div>
+	  		</nav>
+	  		<nav class="navbar navbar-down">
+	    		<div class="container">
 	      <div class="flex-container">  
 	        <div class="navbar-header flex-item">
 	          <div class="navbar-brand" href="#">KHAYAQ</div>
@@ -62,47 +60,69 @@
 	          </div>
 	        </div>  
 	      </div>
-	    </nav>
-	  </nav> 
+	    	</nav>
+	  	</nav> 
 		<section id="formulario">
-			<div class="row">
-				<div class="col-xs-12 col-md-12 col-lg-12 datos text-center" >
-					<div class="form-group">
-						<label for="usr">Reservar de asientos</label>
+			<div class="row" >
+				<div class="col-xs-12 col-md-12 col-lg-12 datos text-left" id="scp-Seating" >
+					<div class="form-group col-xs-5 col-md-5 col-lg-5 datos text-center" >
+						<p id="1">Reservar de asientos</p>
+					</div>
+					<div class="form-group col-xs-5 col-md-5 col-lg-5 datos text-center" >
+						<p id="2">Liberar asientos</p>
+					</div>
+					<div class="form-group col-xs-5 col-md-5 col-lg-5 datos text-center" >
+						<p id="3">Buscar Dni</p>
+					</div>
+					<div class="form-group col-xs-5 col-md-5 col-lg-5 datos text-cente">
+						<p id="4">Listar pasajeros</p>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12 col-md-12 col-lg-12 datos text-center">
-					<div class="form-group">
-						<label for="usr">Liberar asientos</label>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12 col-md-12 col-lg-12 datos text-center">
-					<div class="form-group">
-						<label for="usr">Buscar Dni</label>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12 col-md-12 col-lg-12 datos text-center">
-					<div class="form-group">
-						<label for="usr">Listar pasajeros</label>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12 col-md-12 col-lg-12 datos text-center">
-					<div class="form-group">
-						<input type="text" class="form-control" id="password">
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12 text-center">
-					<button type="button" class="btn btn-primary" value="Guardar datos">Enviar</button>
+				<div class="col-lg-12"  >
+					<div class="no-visibility col-xs-12 col-md-12 col-lg-12" id="table-space">
+						<table>
+						  	<tr class="seating-tr">
+						        <td class="seating-air" id="1">1</td>
+						        <td class="seating-air" id="2">2</td>
+						        <td class="seating-air" id="3">3</td>
+						        <td class="seating-air" id="4">4</td>
+						        <td class="seating-air" id="5">5</td>
+						    </tr>
+						    <tr class="seating-tr">
+						        <td class="seating-air" id="6">6</td>
+						        <td class="seating-air" id="7">7</td>
+						        <td class="seating-air" id="8">8</td>
+						        <td class="seating-air" id="9">9</td>
+						        <td class="seating-air" id="10">10</td>
+						    </tr>
+						</table>
+				  	</div>
+				  	<div class="col-xs-12 col-md-12 col-lg-12 no-visibility " id="show-seating"></div>
+		            <div class ="no-visibility" id="form-space">
+		                <p class="form-title text-center text-uppercase">Datos del pasajero</p>
+		                <form>
+				            <input class="input-data" id ="data-name" type="text" placeholder="Nombre" />
+				            <input class="input-data" id ="data-lastname" type="text" placeholder="Apellidos" />
+				            <input class="input-data" id ="data-dni" type="number" placeholder="DNI" />
+				            <button id ="data-save">Enviar</button>
+		            </div>
+		            <div class="col-xs-12 col-md-12 col-lg-12 no-visibility" id="search">
+		            <h2>Buscar pasajero</h2>
+           			<div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                                <input type="text" class="search-query form-control" placeholder="Search" id="dni-search"/>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-danger" type="button" >
+                                        <span class=" glyphicon glyphicon-search" id="data-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="col-xs-12 col-md-12 col-lg-12" id="space-found"></div>
+                        </div>
+                    </div>
+		            <div class="col-xs-12 col-md-12 col-lg-12 no-visibility" id="list" >
+		            	<p>Lista de pasajeros</p>	
+		            </div>
 				</div>
 			</div>
 		</section>

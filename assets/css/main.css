@@ -4,6 +4,15 @@ body{
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
+    text-align: center;
+}
+.form-group{
+	overflow: hidden;
+	background-color: #d8ecf7;
+	border: 1px solid #afcde3;
+	border-radius: 5px;
+	border-spacing: 4px;
+	margin-right: 3px;
 }
 .navbar-trans {
   background-color: transparent;
@@ -96,3 +105,70 @@ body{
 .btn-primary{
 	margin: 2%;
 }
+
+table {
+	width: 100%;
+	text-align: center;
+
+}
+.seating-air{
+	    border: 14px solid rgba(128, 139, 150, .0);
+}
+.no-visibility{
+	visibility: hidden;
+}
+
+#form-space{
+    margin: 0%;
+    padding: 5%;
+
+}
+
+.input-data{
+	display: flex;
+	margin :5%;
+
+}
+/*Search*/
+#search{
+	position: absolute;
+    top: 20%;
+}
+#custom-search-input {
+        margin:0;
+        margin-top: 10px;
+        padding: 0;
+    }
+ 
+    #custom-search-input .search-query {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+ 
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+ 
+    #custom-search-input button {
+        border: 0;
+        background: none;
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left: -28px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        color:#D9230F;
+    }
+ 
+    .search-query:focus + button {
+        z-index: 3;   
+    }
