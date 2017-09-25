@@ -43,9 +43,10 @@ class App {
     	});
 	}
 	reservar(event){
-		$('#data-save').click(function(event){
-		$('td').click(function(event){
+	$('td').click(function(event){
     	let id = event.target.id;
+    	this.style.backgroundColor =  '#5ccc0c';
+		$('#data-save').click(function(event){
 		("Numero de asiento seleccionado : " + id);
 	   	let num = parseInt(id);
 	    let obj = seating[num - 1] ;
@@ -55,12 +56,11 @@ class App {
 	    seating[id - 1] =  new Passenger (name, last_name, dni, num); 
 
 		$("#show-seating").html("<center><div><h3>ASIENTOS RESERVADOS</h3><p>"+num+"</p><p>Nombre: "+name+"</p></div><p>Apellido :"+last_name+"</p><p>Dni :"+dni+"</p></center>");
-	    this.style.backgroundColor =  '#5ccc0c';
-
 		$("#data-name").val("");
 		$("#data-lastname").val("");
 		$("#data-dni").val("");
     	});
+    	$('#table-space').addClass('no-visibility');
 	});
 
 	}
