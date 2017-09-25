@@ -1,4 +1,3 @@
-"use strict";
 
 let seating = [];
 console.log(seating)
@@ -24,6 +23,7 @@ class App {
 	  	if(id== 1){
 		  	$ ("#table-space" ).removeClass("no-visibility");
 		  	$('#form-space').removeClass('no-visibility');
+		  	$('#search').addClass("no-visibility");
 	  	}
 	  	/* Liberar pasajero*/
 	  	else if(id==2){
@@ -49,29 +49,25 @@ class App {
     	$('td').click(function(event){
     	let id = event.target.id;
 		$("#show-seating").html("Numero de asiento seleccionado : " + id);
-	   	let num = parseInt(id);
-	    let obj = seating[num - 1] ;
+	    let obj = seating[id - 1] ;
 
-	    if (obj != undefined ) {
-			$("#data-name").val()= obj.name;
-			$("#data-lastname").val()=  obj.last_name;
-			$("#data-dni").val()=  obj.dni;
+	    if (seating[id - 1] != undefined ) {
+			$("#data-name").val()= seating[id - 1].name;
+			$("#data-lastname").val()=  seating[id - 1].last_name;
+			$("#data-dni").val()=  seating[id - 1].dni;
 	    }
     	});
 	}
 	booking(event){
 	$('td').click(function(event){
-    	let id = event.target.id;
+    	var id = event.target.id;
     	this.style.backgroundColor =  '#5ccc0c';
 		$('#data-save').click(function(event){
 		("Numero de asiento seleccionado : " + id);
-	    let obj = seating[id - 1] ;
 		let name=$("#data-name").val();
-		console.log(name);
 		let last_name=$("#data-lastname").val();
 		let dni=$("#data-dni").val();
-	    seating[obj] =  new Passenger (name, last_name, dni, id);
-	    $("#show-seating").removeClass('no-visibility'); 
+	    seating[id-1] =  new Passenger (name, last_name, dni, id); 
 		$("#show-seating").html("<center><div><h3>ASIENTOS RESERVADOS</h3><p>"+id+"</p><p>Nombre: "+name+"</p></div><p>Apellido :"+last_name+"</p><p>Dni :"+dni+"</p></center>");
 		$("#data-name").val("");
 		$("#data-lastname").val("");
@@ -82,10 +78,7 @@ class App {
 
 	}
 	search(){
-		
 		$('#data-search').click(function(e){
-			$("#show-seating").remove();
-		console.log("hola funciono");
 		let dni = $("#dni-search").val();
 		for(let i in seating){
 			console.log(seating);
@@ -100,7 +93,7 @@ class App {
 		});
 	}
 	list(){
-		
+		$('#list').click(function(){
 		let lista = "";
   			for (let i = 1; i <= seating.length; i++) {
     			if (seating[i-1]!= undefined) {
@@ -111,8 +104,10 @@ class App {
 	    			lista += lugar+ nombre + apellido+ dni;
 	    			}
   				}
-  		$("#list").html(lista);
+  		this.html(lista);
+		});
 	}
+
 }
  let classSeating = new App( seating);
 
