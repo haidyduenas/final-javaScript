@@ -34,6 +34,7 @@ class App {
 	  		$ ("#table-space" ).addClass("no-visibility");
 	  		$('#form-space').addClass('no-visibility');
 	  		$ ("#list" ).addClass("no-visibility");
+	  		$("#show-seating").addClass('no-visibility');
 		  	$('#search').removeClass("no-visibility");
 	  	}
 	  	/*Listar pasajeros*/
